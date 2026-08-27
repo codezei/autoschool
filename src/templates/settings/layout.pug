@@ -10,7 +10,7 @@ block html
                 meta(name="theme-color" content=themeColor)
                 title= pageTitle
                 block fonts
-                link(rel="stylesheet" href="css/style.min.css")
+                link(rel="stylesheet" href="css/main.min.css")
                 link(rel="icon" href="img/favicon.ico" type="image/x-icon")
                 link(rel="canonical", href= domain + pageUrl)
                 meta(name="description", content=pageDescription)
@@ -30,5 +30,5 @@ block html
         body
             block content
             block scripts
-                script(src="js/libs.js?v=1.0.2")
-                script(src="js/main.js?v=1.0.2")
+                script(src="js/main.js" defer)
+                script(src="js/swiper-bundle.min.js" async)

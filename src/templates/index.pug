@@ -14,6 +14,10 @@ prepend head
     - const deadline = '04.09.2026'
 
 append head
+    meta(name="robots" content="index, follow")
+    link(rel="preload" as="image" href="img/student-mob.webp" type="image/webp" media="(max-width: 575px)" fetchpriority="high")
+    link(rel="preload" href="fonts/ibm-plex-sans-v23-cyrillic-ext-300.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/ibm-plex-sans-v23-cyrillic-ext-700.woff2" as="font" type="font/woff2" crossorigin)
     include components/schema
 
 append fonts

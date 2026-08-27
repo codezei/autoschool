@@ -1,5 +1,5 @@
 export default function () {
-        const swiper = new Swiper('.swiper-why', {
+        const swiperWhy = new Swiper('.swiper-why', {
             slidesPerView: "auto",
             spaceBetween: 30,
             loop: true,

@@ -17,54 +17,6 @@
       });
     }
 
-    function reviews () {
-      var reviewsSwiper = new Swiper(".reviews-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 16,
-        breakpoints: {
-          // 430: {
-          //   slidesPerView: 1.5,
-          // },
-          576: {
-            slidesPerView: 2
-          },
-          768: {
-            slidesPerView: 3
-          },
-          1200: {
-            slidesPerView: 4
-          }
-        },
-        navigation: {
-          nextEl: ".reviews-button-next",
-          prevEl: ".reviews-button-prev"
-        },
-        on: {
-          transitionEnd: function transitionEnd(swiper) {
-            var reviewTextActive = swiper.el.querySelector('.swiper-slide:not(.swiper-slide-active) .review__text.active');
-
-            if (reviewTextActive) {
-              reviewTextActive.classList.remove('active');
-            }
-
-            var reviewToggleActive = swiper.el.querySelector('.swiper-slide:not(.swiper-slide-active) .review__toggle.active');
-
-            if (reviewToggleActive) {
-              reviewToggleActive.classList.remove('active');
-            }
-          }
-        }
-      });
-      var reviewTogglers = document.querySelectorAll('.review__toggle');
-
-      for (var i = 0; i < reviewTogglers.length; i++) {
-        reviewTogglers[i].addEventListener('click', function (e) {
-          e.currentTarget.previousElementSibling.classList.toggle('active');
-          e.currentTarget.classList.toggle('active');
-        });
-      }
-    }
-
     function timer () {
       initializeTimers();
 
@@ -152,110 +104,6 @@
       }
     }
 
-    function _toConsumableArray(arr) {
-      return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
-    }
-
-    function _arrayWithoutHoles(arr) {
-      if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-    }
-
-    function _iterableToArray(iter) {
-      if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-    }
-
-    function _unsupportedIterableToArray(o, minLen) {
-      if (!o) return;
-      if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-      var n = Object.prototype.toString.call(o).slice(8, -1);
-      if (n === "Object" && o.constructor) n = o.constructor.name;
-      if (n === "Map" || n === "Set") return Array.from(o);
-      if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-    }
-
-    function _arrayLikeToArray(arr, len) {
-      if (len == null || len > arr.length) len = arr.length;
-
-      for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-
-      return arr2;
-    }
-
-    function _nonIterableSpread() {
-      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-    }
-
-    function categories () {
-      var categoriesNavigation = _toConsumableArray(document.querySelectorAll(".categories-navigation-swiper"));
-
-      var categoriesContent = _toConsumableArray(document.querySelectorAll(".categories-content-swiper"));
-
-      categoriesNavigation.map(function (categoriesNavigationSwiper) {
-        var swiper = new Swiper(categoriesNavigationSwiper, {
-          spaceBetween: 8,
-          slidesPerView: 4,
-          watchSlidesProgress: true,
-          slideToClickedSlide: true,
-          initialSlide: 0,
-          roundLengths: true,
-          on: {
-            click: function click(swiper) {
-              var clickedIndex = swiper.clickedIndex;
-
-              if (clickedIndex !== undefined) {
-                swiper.slideTo(clickedIndex);
-              }
-            }
-          }
-        });
-        return swiper;
-      });
-      categoriesContent.map(function (categoriesContentSwiper, categoriesContentSwiperIndex) {
-        var buttonNextSelector = categoriesContentSwiper.dataset.nextSelector || ".swiper-button-next";
-        var buttonPrevSelector = categoriesContentSwiper.dataset.prevSelector || ".swiper-button-prev";
-        var swiper = new Swiper(categoriesContentSwiper, {
-          spaceBetween: 32,
-          allowTouchMove: categoriesContentSwiper.dataset.disallowTouch ? false : true,
-          slideToClickedSlide: true,
-          watchSlidesProgress: true,
-          initialSlide: 0,
-          autoHeight: !!categoriesContentSwiper.dataset.autoHeight || false,
-          navigation: {
-            nextEl: buttonNextSelector,
-            prevEl: buttonPrevSelector
-          },
-          thumbs: {
-            swiper: categoriesNavigation[categoriesContentSwiperIndex].swiper,
-            multipleActiveThumbs: false
-          }
-        });
-        return swiper;
-      });
-      categoriesNavigation.forEach(function (categoriesNavigationSwiper, categoriesNavigationSwiperIndex) {
-        categoriesNavigationSwiper.swiper.on("slideChange", function (swiper) {
-          if (categoriesContent[categoriesNavigationSwiperIndex]) {
-            categoriesContent[categoriesNavigationSwiperIndex].swiper.slideTo(swiper.activeIndex);
-          }
-        });
-      });
-      categoriesContent.forEach(function (categoriesContentSwiper, categoriesContentSwiperIndex) {
-        categoriesContentSwiper.swiper.on("slideChange", function (swiper) {
-          if (categoriesNavigation[categoriesContentSwiperIndex]) {
-            categoriesNavigation[categoriesContentSwiperIndex].swiper.slideTo(swiper.activeIndex);
-          }
-        });
-      });
-      var changeSlideAnchors = document.querySelectorAll('.js-change-slide');
-
-      for (var i = 0; i < changeSlideAnchors.length; i++) {
-        changeSlideAnchors[i].addEventListener('click', function (e) {
-          var currentSwiper = document.querySelector(e.currentTarget.dataset.swiper);
-          var currentSlide = +e.currentTarget.dataset.slide;
-          currentSwiper.swiper.slideTo(currentSlide);
-        });
-      }
-    }
-
     function toggle () {
       var elements = document.querySelectorAll('.js-toggle');
 
@@ -273,60 +121,6 @@
       }
     }
 
-    function why () {
-      var swiper = new Swiper('.swiper-why', {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        loop: true,
-        freeMode: true,
-        speed: 10000,
-        // allowTouchMove: false,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false // reverseDirection: true,
-
-        }
-      });
-    }
-
-    function gallery () {
-      // Знаходимо всі блоки simulator на сторінці
-      var gallerySwipers = document.querySelectorAll('.gallery-swiper-wrapper');
-      gallerySwipers.forEach(function (section) {
-        var mainSwiperEl = section.querySelector('.gallery-swiper-main');
-        var thumbsSwiperEl = section.querySelector('.gallery-swiper-thumbs'); // Якщо в блоці є обидва свайпери
-
-        if (mainSwiperEl && thumbsSwiperEl) {
-          // Спочатку ініціалізуємо мініатюри
-          var thumbsSwiper = new Swiper(thumbsSwiperEl, {
-            spaceBetween: 12,
-            slidesPerView: 3,
-            freeMode: true,
-            watchSlidesProgress: true
-          }); // Потім ініціалізуємо головний слайдер і зв'язуємо його з мініатюрами
-
-          var mainSwiper = new Swiper(mainSwiperEl, {
-            spaceBetween: 10,
-            effect: 'fade',
-            fadeEffect: {
-              crossFade: true
-            },
-            // --- ДОДАНІ НАЛАШТУВАННЯ АВТОПЛЕЮ ---
-            autoplay: {
-              delay: 3500,
-              // Час показу одного слайда (3.5 секунди)
-              disableOnInteraction: true // Зупинити назавжди, якщо юзер клікнув/свайпнув
-
-            },
-            // ------------------------------------
-            thumbs: {
-              swiper: thumbsSwiper
-            }
-          });
-        }
-      });
-    }
-
     function video () {
       var videoContainers = document.querySelectorAll('.video-local');
       videoContainers.forEach(function (container) {
@@ -335,11 +129,8 @@
 
         if (video && playBtn) {
           playBtn.addEventListener('click', function () {
-            // Додаємо клас для приховування кастомної кнопки
-            container.classList.add('is-playing'); // Вмикаємо нативні елементи керування (пауза, гучність, таймлайн)
-
-            video.setAttribute('controls', 'controls'); // Запускаємо відео
-
+            container.classList.add('is-playing');
+            video.setAttribute('controls', 'controls');
             video.play();
           });
         }
@@ -367,14 +158,10 @@
 
     document.addEventListener('DOMContentLoaded', function () {
       header();
-      reviews();
       timer();
-      categories();
       toggle();
-      why();
-      gallery();
       video();
-      messengers(); // park()
+      messengers();
     });
 
 }());
