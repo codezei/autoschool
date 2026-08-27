@@ -14,10 +14,10 @@ section#process.process.section
                         .process__step.step Практика
                     .swiper-slide(style="--i: 4;")
                         .process__step.step Іспит
-            .swiper.categories-content-swiper.card.card-secondary
-                .swiper-pagination
+            .swiper.categories-content-swiper
+                //- .swiper-pagination
                 .swiper-wrapper
-                    .swiper-slide
+                    .swiper-slide.card.card-secondary
                         h4 Швидка реєстрація та зарахування
                         p Оформлення документів займає лише 10 хвилин. Ви обираєте зручну форму навчання та графік занять.
                         ul.list.list-check
@@ -31,9 +31,9 @@ section#process.process.section
                                 span
                                     <b>Зручна оплата:</b> можливість розпочати навчання з мінімальним першим внеском
                         p
-                            +btn("success", "normal", true)
+                            +btn("primary", "normal", true)
                                 span Почати реєстрацію
-                    .swiper-slide
+                    .swiper-slide.card.card-secondary
                         h4 Теоретичний курс (3 тижні)
                         p Опанування ПДР за державною програмою в сучасних обладнаних аудиторіях або зручно онлайн.
                         ul.list.list-check
@@ -47,9 +47,9 @@ section#process.process.section
                                 span
                                     <b>Формати на вибір:</b> вечірні групи, групи вихідного дня або інтерактивне онлайн-навчання
                         p
-                            +btn("success", "normal", true)
+                            +btn("primary", "normal", true)
                                 span Обрати формат навчання
-                    .swiper-slide
+                    .swiper-slide.card.card-secondary
                         h4 Практичний курс (6 тижнів)
                         p Індивідуальні заняття на авто з власного автопарку (АКПП чи МКПП) з персональним інструктором.
                         ul.list.list-check
@@ -63,9 +63,9 @@ section#process.process.section
                                 span
                                     <b>Маршрути ТСЦ:</b> обов'язкове відпрацювання офіційних екзаменаційних маршрутів у Кропивницькому
                         p
-                            +btn("success", "normal", true)
+                            +btn("primary", "normal", true)
                                 span Навчитися водити без страху
-                    .swiper-slide
+                    .swiper-slide.card.card-secondary
                         h4 Організація та супровід на іспитах у ТСЦ
                         p Повний юридичний та організаційний супровід від автошколи на всіх етапах фінальних іспитів.
                         ul.list.list-check
@@ -79,5 +79,5 @@ section#process.process.section
                                 span
                                     <b>Знайоме авто:</b> складаєте практичний іспит на тому ж автомобілі, на якому навчалися
                         p
-                            +btn("success", "normal", true)
+                            +btn("primary", "normal", true)
                                 span Хочу скласти іспит

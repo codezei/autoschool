@@ -1,5 +1,29 @@
 .about {
-    &__gallery {
-        max-width: 400px;
+
+    &__content {
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            width: 150%;
+            aspect-ratio: 1/1;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-60%, -50%) scale(-1,1);
+            background-image: url(../img/bg.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+
+
+    }
+
+    @media screen and (min-width: 992px) {
+            &__gallery {
+                    max-width: 400px;
+                }
     }
 }

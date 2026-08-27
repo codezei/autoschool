@@ -44,15 +44,18 @@
     &-primary {
         --bg: var(--color-1-tint-1);
         --color: white;
+        text-shadow: 1px 1px rgba($color: #000000, $alpha: 0.3);
     }
 
     &-secondary {
         --bg: var(--color-2-base);
-        --color: #fff;
+        --color: var(--color-1-shade-2);
+        text-shadow: 1px 1px rgba($color: #000000, $alpha: 0.3);
     }
     &-success {
         --bg: rgb(55, 140, 85);
         --color: #fff;
+        text-shadow: 1px 1px rgba($color: #000000, $alpha: 0.3);
     }
 
     &-arrow:after {

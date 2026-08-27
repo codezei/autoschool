@@ -943,8 +943,22 @@ br {
 .footer {
     background: var(--color-1-tint-1);
     padding: 15px;
+    color: #fff;
 }
 
 .swiper {
     position: relative;
+}
+
+.text-shadow-dark {
+    text-shadow: 1px 1px rgba($color: #000000, $alpha: 0.2);
+}
+.text-shadow-light {
+    text-shadow: 1px 1px rgba($color: #ffffff, $alpha: 0.2);
+}
+.text-shadow-none {
+    text-shadow: none;
+}
+.swiper.categories-content-swiper {
+    padding: 1px;
 }
