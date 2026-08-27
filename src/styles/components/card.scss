@@ -98,8 +98,12 @@
         background: var(--card-bg-frame);
         color: var(--card-text-frame);
         border-radius: 0.5rem;
-        padding: 1rem;
+        padding: 0.5rem;
         height: 100%;
+
+        @media screen and (min-width: 768px) {
+            padding: 1rem;
+        }
     }
 
     &__title,

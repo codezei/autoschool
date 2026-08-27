@@ -1,4 +1,4 @@
 mixin btn(variant = "primary", size = "normal", arrow = false)
-    a.btn(class=[`btn-${variant}`, `btn-${size}`, arrow && "btn-arrow"] href="tel:+380505969013")
+    a.btn(class=[`btn-${variant}`, `btn-${size}`, arrow && "btn-arrow"] href="tel:+380505969013")&attributes(attributes)
         if block
             block

@@ -130,11 +130,11 @@
     //     transition-delay: calc((10 - var(--i)) * (var(--speed) / 2.1));
     // }
 
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 768px) {
         padding: 1rem;
         font-size: 1.25rem;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
         font-size: 1.5rem;
     }
 }

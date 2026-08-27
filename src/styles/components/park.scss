@@ -1,14 +1,29 @@
 .swiper-park {
-    --swiper-navigation-sides-offset: 0px;
+    --swiper-navigation-sides-offset: 2px;
+    --swiper-navigation-size: 16px;
     padding: 2px;
+    padding-right: 22px;
+    padding-left: 22px;
+    overflow: visible;
+
     .swiper-pagination {
         position: static;
     }
+        .swiper-button-prev {
+            transform: scale(-1,1) !important;
+        }
+        .swiper-button-next {
+            transform: scale(1,1) !important;
+        }
     .swiper-button-prev, .swiper-button-next {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background: #fff;
-        box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.5);
+        position: absolute;
+        width: auto;
+        height: auto;
+
+        // width: 44px;
+        // height: 44px;
+        // border-radius: 50%;
+        // background: #fff;
+        // box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.5);
     }
 }

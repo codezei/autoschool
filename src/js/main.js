@@ -8,7 +8,7 @@ import why from './modules/why'
 import gallery from './modules/gallery'
 import video from './modules/video'
 import messengers from './modules/messengers'
-import park from './modules/park'
+// import park from './modules/park'
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     gallery()
     video()
     messengers()
-    park()
+    // park()
 
 
 

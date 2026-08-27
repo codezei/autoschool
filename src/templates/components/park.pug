@@ -3,11 +3,8 @@ section.park.section#park
         .pre-title Наші автомобілі
         h2.title Власний автопарк — навчайтесь на сучасних та безпечних авто
         p.subtitle.h5 Обирайте автомобіль із механічною (МКПП) або автоматичною (АКПП) коробкою передач. Усі наші авто регулярно проходять технічний огляд, обладнані додатковими педалями для інструктора та повністю відповідають вимогам ТСЦ МВС України.
-        .swiper.swiper-park
-            .swiper-button-next
-            .swiper-button-prev
-            .swiper-wrapper
-                .swiper-slide
+            .row.row-cols-sm-2.row-cols-xl-4
+                .col
                     .card.card-success
                         picture
                             source(srcset="img/car-1.webp" type="image/webp")
@@ -21,9 +18,9 @@ section.park.section#park
                                             strong Nissan Note
                                     tr
                                         td Коробка
-                                        td ::&nbsp;
+                                        td :&nbsp;
                                             strong Автомат
-                .swiper-slide
+                .col
                     .card.card-success
                         picture
                             source(srcset="img/car-2.webp" type="image/webp")
@@ -39,7 +36,7 @@ section.park.section#park
                                         td Коробка
                                         td :&nbsp;
                                             strong Механічна
-                .swiper-slide
+                .col
                     .card.card-success
                         picture
                             source(srcset="img/car-3.webp" type="image/webp")
@@ -55,7 +52,7 @@ section.park.section#park
                                         td Коробка
                                         td :&nbsp;
                                             strong Механічна
-                .swiper-slide
+                .col
                     .card.card-success
                         picture
                             source(srcset="img/car-4.webp" type="image/webp")

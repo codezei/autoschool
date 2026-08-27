@@ -1,7 +1,7 @@
 export default function () {
     var swiper = new Swiper('.swiper-park', {
-        slidesPerView: 4,
-        spaceBetween: 16,
+        slidesPerView: 1,
+        spaceBetween: 26,
         pagination: {
             el: '.swiper-pagination',
         },
@@ -10,11 +10,8 @@ export default function () {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            576: {
-                slidesPerView: 2,
-            },
             768: {
-                slidesPerView: 2.5,
+                slidesPerView: 2,
             },
             992: {
                 slidesPerView: 3,
