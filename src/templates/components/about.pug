@@ -4,7 +4,7 @@ section.about.section#about
         h2.title Автошкола «Центр» у Кропивницькому — 15 років досвіду та тисячі впевнених водіїв
         h3.subtitle.h5.text-light Акредитований заклад із власною методикою підготовки до іспитів у ТСЦ МВС
         p З 2011 року автошкола «Центр» проводить комплексну підготовку водіїв категорії B у Кропивницькому. Наша мета — не просто підготувати вас до складання іспиту в ТСЦ з першої спроби, а навчити безпечному та впевненому водінню у реальному міському трафіку.
-        .row.row-cols-lg-2
+        .row.row-cols-lg-2.align-items-center
             .col
                 ol.list.list-check
                     li
@@ -13,9 +13,12 @@ section.about.section#about
                     li
                         span
                             <b>5 000+</b> випускників вже отримали посвідчення водія
+                    //- li
+                    //-     span
+                    //-         <b>100%</b> практики на офіційних маршрутах ТСЦ
                     li
                         span
-                            <b>100%</b> практики на офіційних маршрутах ТСЦ
+                            <b>«Народний бренд 2023»</b> — 2 місце у номінації «Автошкола» за вибором містян
                 p.text-bold.h5 Наші випускники отримують не просто права, а реальні навички:
                 ul.list.list-check
                     li
@@ -27,6 +30,25 @@ section.about.section#about
                     li
                         span
                             <b>Контраварійна база:</b> відпрацювання реакцій та безпечних маневрів на сучасному автосимуляторі.
-            .col.text-center
-                .card
-                    img.card__img(src="img/classroom.jpg", alt="Навчальний клас автошколи Центр у Кропивницькому", width="600", loading="lazy")
+            .col
+                //- Блок галереї (схожий на симулятор) у правій колонці
+                .about__gallery.gallery-swiper-wrapper
+                    //- Головний слайдер
+                    .swiper.gallery-swiper-main
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src="img/award.jpeg", alt="Нагорода Народний Бренд 2023 - 2 місце у номінації Автошкола", loading="lazy")
+                            .swiper-slide
+                                img(src="img/classroom.jpg", alt="Навчальний клас автошколи Центр у Кропивницькому", loading="lazy")
+                            .swiper-slide
+                                img(src="img/award.jpeg", alt="Нагорода Народний Бренд 2023 - 2 місце у номінації Автошкола", loading="lazy")
+
+                    //- Мініатюри (Thumbs)
+                    .swiper.gallery-swiper-thumbs
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src="img/classroom.jpg", alt="Мініатюра класу", loading="lazy")
+                            .swiper-slide
+                                img(src="img/award.jpeg", alt="Мініатюра нагороди", loading="lazy")
+                            .swiper-slide
+                                img(src="img/award.jpeg", alt="Мініатюра нагороди", loading="lazy")

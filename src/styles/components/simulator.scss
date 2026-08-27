@@ -40,7 +40,7 @@
 }
 
 // Стилі для самої міні-галереї
-.simulator-swiper-main {
+.gallery-swiper-main {
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 1rem;
@@ -53,7 +53,7 @@
     }
 }
 
-.simulator-swiper-thumbs {
+.gallery-swiper-thumbs {
     .swiper-slide {
         cursor: pointer;
         border-radius: 8px;

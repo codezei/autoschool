@@ -94,11 +94,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Знаходимо всі блоки simulator на сторінці
-    const simulatorSections = document.querySelectorAll('.simulator');
+    const gallerySwipers = document.querySelectorAll('.gallery-swiper-wrapper');
 
-    simulatorSections.forEach(section => {
-        const mainSwiperEl = section.querySelector('.simulator-swiper-main');
-        const thumbsSwiperEl = section.querySelector('.simulator-swiper-thumbs');
+    gallerySwipers.forEach(section => {
+        const mainSwiperEl = section.querySelector('.gallery-swiper-main');
+        const thumbsSwiperEl = section.querySelector('.gallery-swiper-thumbs');
 
         // Якщо в блоці є обидва свайпери
         if (mainSwiperEl && thumbsSwiperEl) {

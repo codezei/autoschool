@@ -6,8 +6,8 @@ section.simulator.section#simulator-2
         h3.subtitle.h5.text-light Єдина автошкола в місті, де ви можете безпечно відчути, як алкоголь впливає на реакцію та координацію водія.
         p Ці окуляри — не просто тренажер, а потужний інструмент профілактики. Зовні вони нагадують гірськолижну маску, але після надягання повністю імітують стан сп'яніння (0,2–0,4 проміле): зір затуманюється, реакція сповільнюється, а координація порушується.
         .simulator__grid
-            .simulator__gallery
-                .swiper.simulator-swiper-main
+            .simulator__gallery.gallery-swiper-wrapper
+                .swiper.gallery-swiper-main
                     .swiper-wrapper
                         .swiper-slide
                             img(src="img/glass-1.jpg", alt="Автотренажер 1", loading="lazy")
@@ -21,7 +21,7 @@ section.simulator.section#simulator-2
                                     svg(viewBox="0 0 64 64" width="64" height="64")
                                         circle(cx="32" cy="32" r="32" fill="#007bff" opacity="0.9")
                                         path(d="M26 20l18 12-18 12V20z" fill="#ffffff")
-                .swiper.simulator-swiper-thumbs
+                .swiper.gallery-swiper-thumbs
                     .swiper-wrapper
                         .swiper-slide
                             img(src="img/glass-1.jpg", alt="Мініатюра 1", loading="lazy")

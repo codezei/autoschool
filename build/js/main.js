@@ -1109,10 +1109,10 @@
       // animate();
       // Знаходимо всі блоки simulator на сторінці
 
-      var simulatorSections = document.querySelectorAll('.simulator');
-      simulatorSections.forEach(function (section) {
-        var mainSwiperEl = section.querySelector('.simulator-swiper-main');
-        var thumbsSwiperEl = section.querySelector('.simulator-swiper-thumbs'); // Якщо в блоці є обидва свайпери
+      var gallerySwipers = document.querySelectorAll('.gallery-swiper-wrapper');
+      gallerySwipers.forEach(function (section) {
+        var mainSwiperEl = section.querySelector('.gallery-swiper-main');
+        var thumbsSwiperEl = section.querySelector('.gallery-swiper-thumbs'); // Якщо в блоці є обидва свайпери
 
         if (mainSwiperEl && thumbsSwiperEl) {
           // Спочатку ініціалізуємо мініатюри
