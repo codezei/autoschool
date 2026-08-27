@@ -101,11 +101,27 @@ include ../mixins/review
         //-     text: ``
         //- },
     ]
-section.reviews.section
+section.reviews.section#reviews
     .container
         .pre-title Відгуки випускників
         h2.title Історії успіху наших учнів у Кропивницькому
         h3.subtitle.h5.text-light Чесні відгуки про роботу наших інструкторів, автопарк та підготовку до іспитів
+        .row
+            .proof
+                img.proof__icon(src="img/google-icon.svg", alt="Відгуки про автошколу Центр у Google", width="30", height="30")
+                div
+                    .proof__rating.rating(style="--star-rating: 5;")
+                    b.text-bold 5.0
+                    |&nbsp;
+                    a.proof__reviews(href="https://maps.app.goo.gl/z6bf4nLhmzogFT6x5", target="_blank", rel="noopener") 32 відгуки
+            .proof
+                img.proof__icon(src="img/top20.png", alt="Відгуки про автошколу Центр у Google", height="30")
+                div
+                    .proof__rating.rating(style="--star-rating: 4.9;")
+                    b.text-bold 4.9
+                    |&nbsp;
+                    a.proof__reviews(href="https://top20.ua/kr/obuchenie/avtoshkolyi/tsentr-avtoshkola.html", target="_blank", rel="noopener") 93 відгуки
+        br
         .row.row-cols-sm-2.row-cols-lg-3.row-cols-xl-4
             each review, i in reviews
                 .col.animate-fade-in(style=`--i: ${i};`)

@@ -50,6 +50,10 @@
         --bg: var(--color-2-base);
         --color: #fff;
     }
+    &-success {
+        --bg: rgb(55, 140, 85);
+        --color: #fff;
+    }
 
     &-arrow:after {
         content: "➜";
@@ -93,7 +97,7 @@
     }
 
     @media screen and (min-width: 992px) {
-        &:hover {
+        &:is(a, button):hover {
             animation: none;
             transform: translate(-2px, -2px);
             filter: drop-shadow(4px 6px 15px color-mix(in srgb, var(--color-1-tint-1) 50%, transparent));

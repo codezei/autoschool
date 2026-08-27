@@ -5,7 +5,7 @@ mixin review(name, rating, date, text)
             .card__text
                 .rating(style=`--star-rating: ${rating};`)
         .card__body
-            .card__text.text-muted= date
+            //- .card__text.text-muted= date
             p.card__text.js-collapse.lh-4= text
         .card__footer
             button.js-target(type="button")

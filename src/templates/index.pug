@@ -38,12 +38,14 @@ prepend head
 
 append content
     include mixins/date
+    include mixins/messengers
     include mixins/btn
     include mixins/faq-item
     include components/header
     main
         include components/promo
         include components/courses
+        include components/banner
         include components/about
         include components/why
         hr.hr
@@ -54,8 +56,11 @@ append content
         include components/park
         include components/process
         include components/reviews
+        include components/banner-2
         include components/faq
+        include components/banner-3
         include components/contacts
         include components/icons
+        +messengers()
     include components/footer
 append scripts

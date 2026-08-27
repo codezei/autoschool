@@ -1,13 +1,26 @@
 nav.socials
-    a.socials__item(href="")
-        svg(width="16" height="16")
+    //- Телефон (відкриває набір номера)
+    a.socials__item(
+        href="tel:+380505969013"
+        aria-label="Зателефонувати нам"
+    )
+        svg(width="16" height="16" aria-hidden="true")
             use(href="#tel")
-    a.socials__item(href="")
-        svg(width="18" height="18")
+
+    //- Email (відкриває поштовий клієнт)
+    a.socials__item(
+        href="mailto:boroviko1963@gmail.com"
+        aria-label="Написати нам листа"
+    )
+        svg(width="18" height="18" aria-hidden="true")
             use(href="#email")
-    //- a.socials__item(href="")
-    //-     svg(width="24" height="24")
-    //-         use(href="#whatsapp")
-    a.socials__item(href="")
-        svg(width="16" height="16")
+
+    //- Instagram (перехід на сторінку профілю)
+    a.socials__item(
+        href="https://www.instagram.com/autoschool_centre_krop/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Перейти на наш профіль в Instagram"
+    )
+        svg(width="16" height="16" aria-hidden="true")
             use(href="#instagram")

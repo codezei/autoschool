@@ -1126,10 +1126,17 @@
           var mainSwiper = new Swiper(mainSwiperEl, {
             spaceBetween: 10,
             effect: 'fade',
-            // Можна прибрати, якщо хочеш звичайне гортання
             fadeEffect: {
               crossFade: true
             },
+            // --- ДОДАНІ НАЛАШТУВАННЯ АВТОПЛЕЮ ---
+            autoplay: {
+              delay: 3500,
+              // Час показу одного слайда (3.5 секунди)
+              disableOnInteraction: true // Зупинити назавжди, якщо юзер клікнув/свайпнув
+
+            },
+            // ------------------------------------
             thumbs: {
               swiper: thumbsSwiper
             }
@@ -1159,6 +1166,24 @@
 
             video.play();
           });
+        }
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      // Знаходимо твій блок з месенджерами
+      var messengers = document.querySelector('.messengers');
+      if (!messengers) return; // Якщо блоку немає на сторінці, скрипт не ламатиметься
+
+      window.addEventListener('scroll', function () {
+        // window.innerHeight — це висота одного екрана користувача
+        // Множимо на 1.5, щоб месенджери з'явилися десь на середині другого - початку третього екрана.
+        // Якщо хочеш рівно після 2 повних екранів (на початку третього), зміни 1.5 на 2.
+        var scrollThreshold = window.innerHeight * 2;
+
+        if (window.scrollY > scrollThreshold) {
+          messengers.classList.add('is-visible');
+        } else {
+          messengers.classList.remove('is-visible');
         }
       });
     });

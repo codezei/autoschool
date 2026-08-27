@@ -1,4 +1,4 @@
-section.promo.section
+section.promo.section#promo
     .container
         .promo-grid
             .promo-grid__head.promo__head
@@ -26,7 +26,7 @@ section.promo.section
                                     img.helm(src="img/helm.png", alt="Автокурси категорії B у Кропивницькому", width="200", loading="eager")
                     .card__footer
                         .card__footer-btn
-                            +btn("#", "cta", "normal", true)
+                            +btn( "cta", "normal", true)
                                 span Забронювати місце в групі
                         .card__footer-text І вже через 9 тижнів ти будеш готовий до іспиту в ТСЦ
             .promo-grid__graduate.promo__graduate
@@ -34,9 +34,9 @@ section.promo.section
                     img.promo__graduate-img(src="img/student.png", alt="Учень автошколи Центр Кропивницький з посвідченням водія", loading="eager")
             .promo-grid__proof.promo__proof
                 .proof
-                    img.proof__icon(src="img/google-icon.svg", alt="Відгуки про автошколу Центр у Google", width="30")
+                    img.proof__icon(src="img/google-icon.svg", alt="Відгуки про автошколу Центр у Google", width="30", height="30")
                     div
                         .proof__rating.rating(style="--star-rating: 5;")
                         b.text-bold 5.0
                         |&nbsp;
-                        a.proof__reviews(href="https://maps.app.goo.gl/z6bf4nLhmzogFT6x5", target="_blank", rel="noopener") 32 відгук
+                        a.proof__reviews(href="https://maps.app.goo.gl/z6bf4nLhmzogFT6x5", target="_blank", rel="noopener") 32 відгуки

@@ -1,0 +1,28 @@
+mixin messengers()
+    nav.messengers
+        //- WhatsApp: офіційне посилання (міжнародний формат без плюса)
+        a.messengers__item(
+            href="https://wa.me/380505969013"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Написати у WhatsApp"
+        )
+            img(src="img/whatsapp-icon.svg", alt="" aria-hidden="true", width="32", height="32")
+
+        //- Viber: прямий виклик чату в додатку (%2B - це закодований плюс)
+        a.messengers__item(
+            href="viber://chat?number=%2B380505969013"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Написати у Viber"
+        )
+            img(src="img/viber-icon.svg", alt="" aria-hidden="true", width="32", height="32")
+
+        //- Instagram: прямий перехід у Direct, який ми обговорили
+        a.messengers__item(
+            href="https://ig.me/m/autoschool_centre_krop"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Написати в Instagram"
+        )
+            img(src="img/instagram-icon.svg", alt="" aria-hidden="true", width="32", height="32")

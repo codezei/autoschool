@@ -177,6 +177,10 @@
 
     }
 
+    @media screen and (min-width: 1400px) {
+        --padding-top-add: 60px;
+    }
+
 }
 
 
@@ -184,5 +188,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-
+    &__icon {
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+    }
 }

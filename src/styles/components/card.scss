@@ -53,6 +53,12 @@
         --card-bg-frame: var(--color-2-base);
         --card-text-frame: #000
     }
+    &-success {
+        --card-bg: #fefefe;
+        --card-text: rgb(0, 17, 6);
+        --card-bg-frame: rgb(55, 140, 85);
+        --card-text-frame: #fff;
+    }
 
     &__header {
         display: flex;
