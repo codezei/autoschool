@@ -1,0 +1,58 @@
+/* Додаємо анімацію миготіння */
+@keyframes blink-separator {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.timer {
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 1rem;
+
+    &__title {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: max-content;
+        white-space: nowrap;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        // gap: 0.25rem;
+        font-family: monospace;
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: attr(data-text);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+            // color: gray;
+        }
+    }
+
+    /* Стилі та анімація для двокрапок */
+    &__separator {
+        padding: 0 4px;
+        /* Легкий відступ від кнопок, якщо gap закоментований */
+        font-weight: bold;
+        /* Зробимо їх трохи виразнішими */
+        // animation: blink-separator 1s linear infinite;
+        /* 1 секунда - стандартний ритм годинника */
+    }
+}

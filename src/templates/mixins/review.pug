@@ -1,0 +1,19 @@
+mixin review(name, rating, date, text)
+    .card.card-secondary.js-toggle(data-target=".js-target", data-collapse=".js-collapse")
+        .card__header
+            .h5.card__title.text-bold.mb-0= name
+            .card__text
+                .rating(style=`--star-rating: ${rating};`)
+        .card__body
+            .card__text.text-muted= date
+            p.card__text.js-collapse.lh-4= text
+        .card__footer
+            button.js-target(type="button")
+                span.in-active-none
+                    svg.icon.icon-right(width="16" height="16")
+                        use(href="#eye")
+                    | Показати більше
+                span.in-inactive-none
+                    svg.icon.icon-right(width="16" height="16")
+                        use(href="#eye-close")
+                    | приховати

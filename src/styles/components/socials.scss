@@ -1,0 +1,17 @@
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 5px solid var(--color-1-tint-1);
+    border-radius: 50rem;
+    padding: 0 1rem;
+
+    &__item {
+        padding: 0.5rem 0.25rem;
+
+    }
+    svg {
+        vertical-align: middle;
+    }
+}

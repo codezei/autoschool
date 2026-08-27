@@ -1,0 +1,47 @@
+//- Блок 2 (Галерея ліворуч - додано клас .simulator--reverse)
+section.simulator.simulator--reverse.section
+    .container
+        .pre-title Безпека та усвідомленість за кермом
+        h2.title Окуляри-симулятори Drunk Busters у Кропивницькому
+        h3.subtitle.h5.text-light Єдина автошкола в місті, де ви можете безпечно відчути, як алкоголь впливає на реакцію та координацію водія.
+        p Ці окуляри — не просто тренажер, а потужний інструмент профілактики. Зовні вони нагадують гірськолижну маску, але після надягання повністю імітують стан сп'яніння (0,2–0,4 проміле): зір затуманюється, реакція сповільнюється, а координація порушується.
+        .simulator__grid
+            .simulator__gallery
+                .swiper.simulator-swiper-main
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="img/glass-1.jpg", alt="Автотренажер 1", loading="lazy")
+                        .swiper-slide
+                            img(src="img/glass-2.jpg", alt="Автотренажер 2", loading="lazy")
+                        .swiper-slide
+                            .video-local#video-container
+                                video.video-local__player(preload="none" poster="img/glass-3.jpg" playsinline muted)
+                                    source(src="img/glass-3.mp4", type="video/mp4")
+                                button.video-local__play(aria-label="Запустити відео")
+                                    svg(viewBox="0 0 64 64" width="64" height="64")
+                                        circle(cx="32" cy="32" r="32" fill="#007bff" opacity="0.9")
+                                        path(d="M26 20l18 12-18 12V20z" fill="#ffffff")
+                .swiper.simulator-swiper-thumbs
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="img/glass-1.jpg", alt="Мініатюра 1", loading="lazy")
+                        .swiper-slide
+                            img(src="img/glass-2.jpg", alt="Мініатюра 2", loading="lazy")
+                        .swiper-slide
+                            img(src="img/glass-3.jpg", alt="Мініатюра 3", loading="lazy")
+            .simulator__content.content
+                p.text-bold.h5 Чому цей досвід рятує життя:
+                ul.list.list-check
+                    li
+                        span
+                            <b>Наочна демонстрація:</b> реалістичне відчуття втрати контролю над авто
+                    li
+                        span
+                            <b>Абсолютна безпека:</b> тренінг проходить у класі без ризику для життя
+                    li
+                        span
+                            <b>Формування звички:</b> стійке психологічне табу на керування напідпитку
+                p Ми в автошколі «Центр» віримо в «ефект метелика». Цей практичний досвід закарбується в пам'яті назавжди. Якщо в майбутньому виникне спокуса сісти за кермо після келиха, ви згадаєте це відчуття безпорадності — і просто викличете таксі.
+                p
+                    +btn("#", "primary", "normal", true)
+                        span Записатись на курс

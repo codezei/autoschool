@@ -1,0 +1,55 @@
+//- Блок 1 (Галерея праворуч)
+section.simulator.section
+    .container
+        .simulator__header
+            .pre-title Боїтеся одразу сідати за кермо?
+            h2.title Автотренажер-симулятор водіння у Кропивницькому
+            h3.subtitle.h5.text-light Почніть навчання без страху та стресу. Автошкола «Центр» — єдина в місті, де ви можете відпрацювати перші навички керування на сучасному автотренажері на базі DAEWOO.
+
+        .simulator__grid
+            .simulator__gallery
+                //- Головний слайдер
+                .swiper.simulator-swiper-main
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="img/simulator-1.jpg", alt="Автотренажер 1", loading="lazy")
+                        .swiper-slide
+                            img(src="img/simulator-2.jpg", alt="Автотренажер 2", loading="lazy")
+                        .swiper-slide
+                            .video-local#video-container
+                                video.video-local__player(
+                                    preload="none"
+                                    poster="img/simulator-3.jpg"
+                                    playsinline
+                                    muted
+                                )
+                                    //- Вкажи правильний шлях до свого відео
+                                    source(src="img/simulator-3.mp4", type="video/mp4")
+                                    | Ваш браузер не підтримує відтворення відео.
+
+                                //- Кастомна кнопка Play
+                                button.video-local__play(aria-label="Запустити відео")
+                                    svg(viewBox="0 0 64 64" width="64" height="64")
+                                        circle(cx="32" cy="32" r="32" fill="#007bff" opacity="0.9")
+                                        path(d="M26 20l18 12-18 12V20z" fill="#ffffff")
+
+                //- Мініатюри (Thumbs)
+                .swiper.simulator-swiper-thumbs
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="img/simulator-1.jpg", alt="Мініатюра 1", loading="lazy")
+                        .swiper-slide
+                            img(src="img/simulator-2.jpg", alt="Мініатюра 2", loading="lazy")
+                        .swiper-slide
+                            img(src="img/simulator-3.jpg", alt="Мініатюра 3", loading="lazy")
+            .simulator__content.content
+                p Головна перевага тренажера — повна безпека та швидка адаптація. Ви навчитеся відчувати габарити автомобіля, працювати з педалями та перемикати передачі ще до першого виїзду у реальний міський трафік.
+                p.text-bold.h5 Перші навички — ще до виїзду на дорогу:
+                ul.list.list-check
+                    li Безпечно освоїте базове керування
+                    li Звикнете до габаритів та органів управління
+                    li Відпрацюєте аварійні та складні дорожні ситуації
+                    li Подолаєте страх перед першим виїздом у місто
+                p
+                    +btn("#", "primary", "normal", true)
+                        span Записатись

@@ -1,0 +1,32 @@
+header.header
+    .container
+        .header__inner
+            .header__logo
+                a(href="#").logo
+                    img.logo__img(src="img/logo.png" alt="")
+            address.header__address м. Кропивницький,  <br>вул.&nbsp;Куроп'ятникова&nbsp;2а
+                br
+                | (050) 596-90-13
+
+            .header__menu#main-menu
+                nav.menu
+                    .menu__item
+                        a.menu__link(href="#courses") Курси
+                    .menu__item
+                        a.menu__link(href="#reviews") Відгуки
+                    .menu__item
+                        a.menu__link(href="#process") Процесс навчання
+                    .menu__item
+                        a.menu__link(href="#faq") Поширені питання
+                //- .header__menu-socials.text-center
+                //-     include socials
+                .header__menu-btn.text-center
+                    +btn("#", "primary  ", "small", true)
+                        span Записатись
+            .header__burger
+                button.js-burger.burger(type="button" aria-expanded="false" aria-controls="main-menu")
+                    i.sr-only Відкрити мобільне меню
+                    i.cross
+                        i
+                        i
+                        i

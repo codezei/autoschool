@@ -1,0 +1,61 @@
+extends settings/layout
+
+prepend html
+    - const lang = "pl";
+
+prepend head
+    - const pageTitle = "Автошкола Кропивницький «Центр» — Курси водіння та підготовка до іспитів"
+    - const themeColor = "#ffffff"
+    - const pageDescription = "Автошкола у Кропивницькому: навчання на категорію B. Практика на маршрутах ТСЦ, автотренажер, авто АКПП/МКПП. Доступні ціни! ☎ (050) 596-90-13"
+    - const pageKeywords = ""
+    - const pageUrl = "";
+    - const pageImage = "img/preview.webp";
+    - const twitterImage = "img/preview.webp";
+    - const deadline = '15.09.2026'
+
+//- append head
+//-     include components/schema
+
+//- append fonts
+//-     style.
+//-         @font-face {
+//-             font-display: swap;
+//-             font-family: 'Cormorant Garamond';
+//-             font-style: normal;
+//-             font-weight: 300;
+//-             src: url('./fonts/cormorant-garamond-v20-latin-ext-300.woff2') format('woff2');
+//-         }
+//-         @font-face {
+//-             font-display: swap;
+//-             font-family: 'Cormorant Garamond';
+//-             font-style: normal;
+//-             font-weight: 700;
+//-             src: url('./fonts/cormorant-garamond-v20-latin-ext-700.woff2') format('woff2');
+//-         }
+//-         body  {
+//-             font-family: 'Cormorant Garamond';
+//-         }
+
+append content
+    include mixins/date
+    include mixins/btn
+    include mixins/faq-item
+    include components/header
+    main
+        include components/promo
+        include components/courses
+        include components/about
+        include components/why
+        hr.hr
+        include components/simulator
+        hr.hr
+        include components/simulator-2
+        hr.hr
+        include components/park
+        include components/process
+        include components/reviews
+        include components/faq
+        include components/contacts
+        include components/icons
+    include components/footer
+append scripts

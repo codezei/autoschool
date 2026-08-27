@@ -1,0 +1,13 @@
+.courses {
+        background: url(../img/bg-2.png);
+            background-position: bottom center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+
+            @media screen and (max-width: 991px) {
+                .courses-main-col {
+                    order: -1;
+                }
+            }
+}

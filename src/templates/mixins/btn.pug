@@ -1,0 +1,4 @@
+mixin btn(href = "#", variant = "primary", size = "normal", arrow = false)
+    a.btn(class=[`btn-${variant}`, `btn-${size}`, arrow && "btn-arrow"] href=href)
+        if block
+            block

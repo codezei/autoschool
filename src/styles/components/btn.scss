@@ -1,0 +1,135 @@
+.btn {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px;
+    white-space: nowrap;
+    border-radius: 4px;
+    box-shadow:
+        1px 0 0 #000,
+        -1px 0 0 #000,
+        0 1px 0 #000,
+        0 -1px 0 #000;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+    filter: drop-shadow(0 0 0 color-mix(in srgb, var(--color-1-tint-1) 50%, transparent));
+    background: #fff;
+
+    &-cta {
+        --bg: red;
+        --color: white;
+        overflow: hidden;
+        animation: pulse-glow 2s infinite;
+        &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -150%;
+                width: 50%;
+                height: 100%;
+                background: linear-gradient(to right,
+                        rgba(255, 255, 255, 0) 0%,
+                        rgba(255, 255, 255, 0.4) 50%,
+                        rgba(255, 255, 255, 0) 100%);
+                transform: skewX(-25deg);
+                animation: shine-sweep 8s infinite;
+                z-index: 10; // Щоб відблиск йшов поверх твоїх span
+                pointer-events: none; // Щоб відблиск не перекривав клік мишкою
+            }
+    }
+
+    &-primary {
+        --bg: var(--color-1-tint-1);
+        --color: white;
+    }
+
+    &-secondary {
+        --bg: var(--color-2-base);
+        --color: #fff;
+    }
+
+    &-arrow:after {
+        content: "➜";
+    }
+
+    &-large {
+        --padding: 1.5rem;
+    }
+
+    &-normal {
+        --padding: 1rem;
+    }
+
+    &-small {
+        --padding: 0.75rem;
+        font-size: 0.9em;
+    }
+
+    span {
+        flex-grow: 1;
+    }
+
+    span,
+    &:after {
+        background: var(--bg);
+        color: var(--color);
+        padding: var(--padding, 1rem);
+        border-radius: 4px;
+        display: block;
+        box-shadow:
+            2px 0 0 #fff,
+            -2px 0 0 #fff,
+            0 2px 0 #fff,
+            0 -2px 0 #fff;
+    }
+
+    &:active {
+        span:last-child {
+            transform: translateX(-2px);
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        &:hover {
+            animation: none;
+            transform: translate(-2px, -2px);
+            filter: drop-shadow(4px 6px 15px color-mix(in srgb, var(--color-1-tint-1) 50%, transparent));
+        }
+    }
+}
+
+
+@keyframes pulse-glow {
+    0% {
+        filter: drop-shadow(0 0 0 transparent);
+    }
+
+    50% {
+        // М'яке червоне світіння навколо кнопки
+        filter: drop-shadow(0 0 12px rgba(255, 255, 255, 1));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0 transparent);
+    }
+}
+
+@keyframes shine-sweep {
+    0% {
+        left: -150%;
+    }
+
+    20% {
+        left: 150%;
+    }
+
+    // Відблиск швидко пробігає
+    100% {
+        left: 150%;
+    }
+
+    // Решту часу кнопка чекає
+}

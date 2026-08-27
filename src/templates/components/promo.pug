@@ -1,0 +1,42 @@
+section.promo.section
+    .container
+        .promo-grid
+            .promo-grid__head.promo__head
+                .pre-title Автошкола «Центр»
+                h1.title.promo__title Це твоя автошкола у&nbsp;Кропивницькому — курси водіння та&nbsp;підготовка до&nbsp;іспиту
+                h2.subtitle.promo__subtitle.h5.text-light Отримати посвідчення водія категорії <b>B</b> простіше, ніж здається. <br>Практика на маршрутах ТСЦ Кропивницького, сучасні авто та повний супровід.
+            .promo-grid__list.promo__list
+                ul.list.list-chevron.list-row
+                    li Досвід роботи <br>понад 15 років
+                    li Кваліфіковані <br>інструктори
+                    li Сучасні авто
+            .promo-grid__offer.promo__offer
+                .card.card-primary
+                    .card__body
+                        .card__frame
+                            h3.card__title.h5 Повний курс (теорія + практика)
+                            .row.row-cols-2
+                                .col
+                                    .price-old 14&nbsp;000&nbsp;грн
+                                    .price-new 13&nbsp;000&nbsp;грн
+                                    p До&nbsp;
+                                        span= deadline
+                                    include timer
+                                .col
+                                    img.helm(src="img/helm.png", alt="Автокурси категорії B у Кропивницькому", width="200", loading="eager")
+                    .card__footer
+                        .card__footer-btn
+                            +btn("#", "cta", "normal", true)
+                                span Забронювати місце в групі
+                        .card__footer-text І вже через 9 тижнів ти будеш готовий до іспиту в ТСЦ
+            .promo-grid__graduate.promo__graduate
+                picture
+                    img.promo__graduate-img(src="img/student.png", alt="Учень автошколи Центр Кропивницький з посвідченням водія", loading="eager")
+            .promo-grid__proof.promo__proof
+                .proof
+                    img.proof__icon(src="img/google-icon.svg", alt="Відгуки про автошколу Центр у Google", width="30")
+                    div
+                        .proof__rating.rating(style="--star-rating: 5;")
+                        b.text-bold 5.0
+                        |&nbsp;
+                        a.proof__reviews(href="https://maps.app.goo.gl/z6bf4nLhmzogFT6x5", target="_blank", rel="noopener") 32 відгук

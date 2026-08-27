@@ -1,0 +1,26 @@
+.section {
+    --padding-top: 40px;
+    --padding-bottom: 40px;
+    padding-top: calc(var(--padding-top) + var(--padding-top-add, 0px));
+    padding-bottom: calc(var(--padding-bottom) + var(--padding-bottom-add, 0px));
+
+    @media screen and (min-width: 768px) {
+        --padding-top: 60px;
+        --padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: 992px) {
+        --padding-top: 80px;
+        --padding-bottom: 80px;
+    }
+
+    // @media screen and (min-width: 1200px) {
+    //     --padding-top: 100px;
+    //     --padding-bottom: 100px;
+    // }
+
+    // @media screen and (min-width: 1400px) {
+    //     --padding-top: 120px;
+    //     --padding-bottom: 120px;
+    // }
+}
