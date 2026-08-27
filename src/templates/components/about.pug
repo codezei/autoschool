@@ -13,9 +13,6 @@ section.about.section#about
                     li
                         span
                             <b>5 000+</b> випускників вже отримали посвідчення водія
-                    //- li
-                    //-     span
-                    //-         <b>100%</b> практики на офіційних маршрутах ТСЦ
                     li
                         span
                             <b>«Народний бренд 2023»</b> — 2 місце у номінації «Автошкола» за вибором містян
@@ -31,24 +28,48 @@ section.about.section#about
                         span
                             <b>Контраварійна база:</b> відпрацювання реакцій та безпечних маневрів на сучасному автосимуляторі.
             .col
-                //- Блок галереї (схожий на симулятор) у правій колонці
                 .about__gallery.gallery-swiper-wrapper
-                    //- Головний слайдер
                     .swiper.gallery-swiper-main
                         .swiper-wrapper
                             .swiper-slide
-                                img(src="img/award.jpeg", alt="Нагорода Народний Бренд 2023 - 2 місце у номінації Автошкола", loading="lazy")
+                                picture
+                                    source(srcset="img/about-1.webp" type="image/webp")
+                                    img(src="img/about-1.jpg", alt="Нагорода Народний Бренд 2023 - 2 місце у номінації Автошкола", loading="lazy", width="500", height="707")
                             .swiper-slide
-                                img(src="img/classroom.jpg", alt="Навчальний клас автошколи Центр у Кропивницькому", loading="lazy")
+                                picture
+                                    source(srcset="img/about-2.webp" type="image/webp")
+                                    img(src="img/about-2.jpg", alt="Сучасний навчальний клас автошколи Центр у Кропивницькому", loading="lazy", width="500", height="707")
                             .swiper-slide
-                                img(src="img/award.jpeg", alt="Нагорода Народний Бренд 2023 - 2 місце у номінації Автошкола", loading="lazy")
-
-                    //- Мініатюри (Thumbs)
+                                picture
+                                    source(srcset="img/about-3.webp" type="image/webp")
+                                    img(src="img/about-3.jpg", alt="Інтер'єр навчального класу з планами ПДР", loading="lazy", width="500", height="707")
+                            .swiper-slide
+                                picture
+                                    source(srcset="img/about-4.webp" type="image/webp")
+                                    img(src="img/about-4.jpg", alt="Навчальні автомобілі автошколи Центр", loading="lazy", width="500", height="375")
+                            .swiper-slide
+                                picture
+                                    source(srcset="img/about-5.webp" type="image/webp")
+                                    img(src="img/about-5.jpg", alt="Автопарк автошколи для практичних занять", loading="lazy", width="400", height="164")
                     .swiper.gallery-swiper-thumbs
                         .swiper-wrapper
                             .swiper-slide
-                                img(src="img/classroom.jpg", alt="Мініатюра класу", loading="lazy")
+                                picture
+                                    source(srcset="img/about-1.webp" type="image/webp")
+                                    img(src="img/about-1.jpg", alt="Нагорода Народний Бренд 2023 - мініатюра", loading="lazy", width="500", height="707")
                             .swiper-slide
-                                img(src="img/award.jpeg", alt="Мініатюра нагороди", loading="lazy")
+                                picture
+                                    source(srcset="img/about-2.webp" type="image/webp")
+                                    img(src="img/about-2.jpg", alt="Навчальний клас - мініатюра", loading="lazy", width="500", height="707")
                             .swiper-slide
-                                img(src="img/award.jpeg", alt="Мініатюра нагороди", loading="lazy")
+                                picture
+                                    source(srcset="img/about-3.webp" type="image/webp")
+                                    img(src="img/about-3.jpg", alt="Клас теорії ПДР - мініатюра", loading="lazy", width="500", height="707")
+                            .swiper-slide
+                                picture
+                                    source(srcset="img/about-4.webp" type="image/webp")
+                                    img(src="img/about-4.jpg", alt="Навчальні авто - мініатюра", loading="lazy", width="500", height="375")
+                            .swiper-slide
+                                picture
+                                    source(srcset="img/about-5.webp" type="image/webp")
+                                    img(src="img/about-5.jpg", alt="Автопарк - мініатюра", loading="lazy", width="400", height="164")

@@ -3,7 +3,9 @@ header.header
         .header__inner
             .header__logo
                 a(href="#").logo
-                    img.logo__img(src="img/logo.png" alt="")
+                    picture
+                        source(srcset="img/logo.webp" type="image/webp")
+                        img.logo__img(src="img/logo.png" alt="" width="150" height="69")
             address.header__address м. Кропивницький,  <br>вул.&nbsp;Куроп'ятникова&nbsp;2а
                 br
                 | (050) 596-90-13

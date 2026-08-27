@@ -149,6 +149,7 @@ body {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 svg {
@@ -321,6 +322,9 @@ br {
     display: none;
 }
 
+.js-toggle {
+    cursor: pointer;
+}
 
 .is-active .js-collapse {
     max-height: 500px !important;
@@ -638,9 +642,12 @@ br {
 
 .price-new {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: red;
     // margin-left: 1rem;
+    @media screen and (min-width: 992px) {
+        font-size: 2rem;
+    }
 }
 
 .js-collapse {

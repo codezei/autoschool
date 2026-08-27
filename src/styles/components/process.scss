@@ -1,14 +1,14 @@
 .process {
 
-    background: url(../img/bg-3.png);
+    background: url(../img/bg-3-mob.webp);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
-    // .container {
-    //     background: url(../img/bg.png);
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    // }
+
+    @media screen and (min-width: 576px) {
+        background-image: url(../img/bg-3.webp);
+    }
+
 
     &__content {
 

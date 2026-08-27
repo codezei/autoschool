@@ -12,14 +12,18 @@ section.simulator.section#simulator
                 .swiper.gallery-swiper-main
                     .swiper-wrapper
                         .swiper-slide
-                            img(src="img/simulator-1.jpg", alt="Автотренажер 1", loading="lazy")
+                            picture
+                                source(srcset="img/simulator-1.webp" type="image/webp")
+                                img(src="img/simulator-1.jpg", alt="Фото автотренажера", loading="lazy", width="480", height="640")
                         .swiper-slide
-                            img(src="img/simulator-2.jpg", alt="Автотренажер 2", loading="lazy")
+                            picture
+                                source(srcset="img/simulator-2.webp" type="image/webp")
+                                img(src="img/simulator-2.jpg", alt="Фото працюючого автотренажера", loading="lazy", width="480", height="640")
                         .swiper-slide
                             .video-local#video-container
                                 video.video-local__player(
                                     preload="none"
-                                    poster="img/simulator-3.jpg"
+                                    poster="img/simulator-3.webp"
                                     playsinline
                                     muted
                                 )
@@ -35,16 +39,21 @@ section.simulator.section#simulator
                 .swiper.gallery-swiper-thumbs
                     .swiper-wrapper
                         .swiper-slide
-                            img(src="img/simulator-1.jpg", alt="Мініатюра 1", loading="lazy")
+                            picture
+                                source(srcset="img/simulator-1.webp" type="image/webp")
+                                img(src="img/simulator-1.jpg", alt="Мініатюра фотографії автотренажера", loading="lazy", width="480", height="640")
                         .swiper-slide
-                            img(src="img/simulator-2.jpg", alt="Мініатюра 2", loading="lazy")
+                            picture
+                                source(srcset="img/simulator-2.webp" type="image/webp")
+                                img(src="img/simulator-2.jpg", alt="Мініатюра фотографії автотренажера", loading="lazy", width="480", height="640")
                         .swiper-slide
-                            img(src="img/simulator-3.jpg", alt="Мініатюра 3", loading="lazy")
+                            picture
+                                source(srcset="img/simulator-3.webp" type="image/webp")
+                                img(src="img/simulator-3.jpg", alt="Мініатюра до відео автотренажера", loading="lazy", width="480", height="640")
 
             .simulator__content.content
                 p Головна перевага тренажера — повна безпека та швидка адаптація. Ви навчитеся відчувати габарити автомобіля, працювати з педалями та перемикати передачі ще до першого виїзду у реальний міський трафік.
 
-                //- Додано блок про умови (для учнів безкоштовно, для інших - перше безкоштовно, далі 300 грн/год)
                 .simulator__pricing.p-3.mb-3.bg-light.border.rounded-3
                     p.mb-1 💡 <strong>Умови використання:</strong>
                     p.mb-0 Для учнів нашої автошколи заняття на тренажері — #[strong абсолютно безкоштовно]. Для всіх інших: #[strong перше пробне заняття — безкоштовно], наступні — 300 грн/год.

@@ -10,9 +10,13 @@ section.simulator.section#simulator-2
                 .swiper.gallery-swiper-main
                     .swiper-wrapper
                         .swiper-slide
-                            img(src="img/glass-1.jpg", alt="Автотренажер 1", loading="lazy")
+                            picture
+                                source(srcset="img/glass-1.webp" type="image/webp")
+                                img(src="img/glass-1.jpg", alt="Окуляри симулятор сп'яніння", loading="lazy", width="450", height="532")
                         .swiper-slide
-                            img(src="img/glass-2.jpg", alt="Автотренажер 2", loading="lazy")
+                            picture
+                                source(srcset="img/glass-2.webp" type="image/webp")
+                                img(src="img/glass-2.jpg", alt="Окуляри симулятор сп'яніння в дії", loading="lazy", width="500", height="459")
                         .swiper-slide
                             .video-local#video-container
                                 video.video-local__player(preload="none" poster="img/glass-3.jpg" playsinline muted)
@@ -24,11 +28,17 @@ section.simulator.section#simulator-2
                 .swiper.gallery-swiper-thumbs
                     .swiper-wrapper
                         .swiper-slide
-                            img(src="img/glass-1.jpg", alt="Мініатюра 1", loading="lazy")
+                            picture
+                                source(srcset="img/glass-1.webp" type="image/webp")
+                                img(src="img/glass-1.jpg", alt="Мініатюра до фото окулярів сп'яніння", loading="lazy", width="450", height="532")
                         .swiper-slide
-                            img(src="img/glass-2.jpg", alt="Мініатюра 2", loading="lazy")
+                            picture
+                                source(srcset="img/glass-2.webp" type="image/webp")
+                                img(src="img/glass-2.jpg", alt="Мініатюра до фото окулярів сп'яніння в дії", loading="lazy", width="500", height="459")
                         .swiper-slide
-                            img(src="img/glass-3.jpg", alt="Мініатюра 3", loading="lazy")
+                            picture
+                                source(srcset="img/glass-3.webp" type="image/webp")
+                                img(src="img/glass-3.jpg", alt="Мініатюра до відео окулярів сп'яніння в дії", loading="lazy", width="560", height="1013")
             .simulator__content.content
                 p.text-bold.h5 Чому цей досвід рятує життя:
                 ul.list.list-check

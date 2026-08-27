@@ -23,7 +23,9 @@ section.promo.section#promo
                                         span= deadline
                                     include timer
                                 .col
-                                    img.helm(src="img/helm.png", alt="Автокурси категорії B у Кропивницькому", width="200", loading="eager")
+                                    picture
+                                        source(srcset="img/helm.webp" type="image/webp")
+                                        img.helm(src="img/helm.png", alt="Автокурси категорії B у Кропивницькому", width="200", height="174", loading="eager")
                     .card__footer
                         .card__footer-btn
                             +btn( "cta", "normal", true)
@@ -31,7 +33,10 @@ section.promo.section#promo
                         .card__footer-text І вже через 9 тижнів ти будеш готовий до іспиту в ТСЦ
             .promo-grid__graduate.promo__graduate
                 picture
-                    img.promo__graduate-img(src="img/student.png", alt="Учень автошколи Центр Кропивницький з посвідченням водія", loading="eager")
+                    source(srcset="img/student-mob.webp" type="image/webp" media="(max-width: 575px)")
+                    source(srcset="img/student-mob.png" media="(max-width: 575px)")
+                    source(srcset="img/student.webp" type="image/webp")
+                    img.promo__graduate-img(src="img/student.png", alt="Учень автошколи Центр Кропивницький з посвідченням водія", width="974", height="987", loading="eager")
             .promo-grid__proof.promo__proof
                 .proof
                     img.proof__icon(src="img/google-icon.svg", alt="Відгуки про автошколу Центр у Google", width="30", height="30")
