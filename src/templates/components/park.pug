@@ -1,14 +1,18 @@
 section.park.section#park
     .container
         .pre-title Наші автомобілі
-        h2.title Власний автопарк — навчайтесь на сучасних та безпечних авто
-        p.subtitle.h5 Обирайте автомобіль із механічною (МКПП) або автоматичною (АКПП) коробкою передач. Усі наші авто регулярно проходять технічний огляд, обладнані додатковими педалями для інструктора та повністю відповідають вимогам ТСЦ МВС України.
+        //- Додано входження бренду та міста для посилення локального SEO
+        h2.title Власний автопарк автошколи «Центр» у Кропивницькому
+
+        //- Трохи розширена семантика + професійний термін "дублюючі педалі"
+        p.subtitle.h5 Обирайте автомобіль із механічною (МКПП) або автоматичною (АКПП) коробкою передач для практичних занять. Усі наші авто регулярно проходять технічний огляд, обладнані дублюючими педалями для інструктора та повністю відповідають вимогам ТСЦ МВС України.
             .row.row-cols-sm-2.row-cols-xl-4
                 .col
                     .card.card-primary
                         picture
                             source(srcset="img/car-4.webp" type="image/webp")
-                            img.card__img(src="img/car-4.jpg", alt="Nissan Note коробка автомат", width="400", height="540", loading="lazy")
+                            //- Alt-текст адаптовано під пошукові запити (АКПП / автомат)
+                            img.card__img.w-100(src="img/car-4.jpg", alt="Навчальний автомобіль Nissan Note (АКПП) для уроків водіння на автоматі", width="400", height="540", loading="lazy")
                         .card__body
                             .card__frame
                                 table
@@ -24,7 +28,8 @@ section.park.section#park
                     .card.card-primary
                         picture
                             source(srcset="img/car-2.webp" type="image/webp")
-                            img.card__img(src="img/car-2.jpg", alt="Dacia Sandero синя. Коробка механічна", width="400", height="540", loading="lazy")
+                            //- Alt-текст для механіки
+                            img.card__img.w-100(src="img/car-2.jpg", alt="Синій навчальний автомобіль Dacia Sandero (МКПП) автошколи Центр", width="400", height="540", loading="lazy")
                         .card__body
                             .card__frame
                                 table
@@ -40,7 +45,8 @@ section.park.section#park
                     .card.card-primary
                         picture
                             source(srcset="img/car-3.webp" type="image/webp")
-                            img.card__img(src="img/car-3.jpg", alt="Dacia Sandero червона. Коробка Механічна", width="400", height="540", loading="lazy")
+                            //- Розширений Alt-текст
+                            img.card__img.w-100(src="img/car-3.jpg", alt="Навчальне авто Dacia Sandero для практики водіння на механіці", width="400", height="540", loading="lazy")
                         .card__body
                             .card__frame
                                 table
@@ -56,7 +62,8 @@ section.park.section#park
                     .card.card-primary
                         picture
                             source(srcset="img/car-1.webp" type="image/webp")
-                            img.card__img(src="img/car-1.jpg", alt="Dacia Sandero біла. Коробка механічна", width="400", height="540", loading="lazy")
+                            //- Розширений Alt-текст
+                            img.card__img.w-100(src="img/car-1.jpg", alt="Білий автомобіль Dacia Sandero (МКПП) для складання іспиту в ТСЦ", width="400", height="540", loading="lazy")
                         .card__body
                             .card__frame
                                 table

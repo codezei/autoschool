@@ -1,23 +1,23 @@
 extends settings/layout
 
 prepend html
-    - const lang = "pl";
+    - const lang = "uk";
 
 prepend head
-    - const pageTitle = "Автошкола Кропивницький «Центр» — Курси водіння та підготовка до іспитів"
+    - const pageTitle = "Автошкола «Центр» у Кропивницькому | Курси водіння"
     - const themeColor = "#ffffff"
-    - const pageDescription = "Автошкола у Кропивницькому: навчання на категорію B. Практика на маршрутах ТСЦ, автотренажер, авто АКПП/МКПП. Доступні ціни! ☎ (050) 596-90-13"
+    - const pageDescription = "Курси водіння у Кропивницькому (кат. B). Авто АКПП/МКПП, автотренажер, практика в ТСЦ. ☎ (050) 596-90-13"
     - const pageKeywords = ""
     - const pageUrl = "";
-    - const pageImage = "img/preview.webp";
-    - const twitterImage = "img/preview.webp";
+    - const pageImage = "img/og-image.webp";
+    - const twitterImage = "img/og-image.webp";
     - const deadline = '04.09.2026'
 
 append head
     meta(name="robots" content="index, follow")
     link(rel="preload" as="image" href="img/student-mob.webp" type="image/webp" media="(max-width: 575px)" fetchpriority="high")
-    link(rel="preload" href="fonts/ibm-plex-sans-v23-cyrillic-ext-300.woff2" as="font" type="font/woff2" crossorigin)
-    link(rel="preload" href="fonts/ibm-plex-sans-v23-cyrillic-ext-700.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/ibm-plex-sans-v23-cyrillic-ext-300.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high")
+    link(rel="preload" href="fonts/ibm-plex-sans-v23-cyrillic-ext-700.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high")
     include components/schema
 
 append fonts

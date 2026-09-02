@@ -104,18 +104,24 @@ include ../mixins/review
 section.reviews.section#reviews
     .container
         .pre-title Відгуки випускників
-        h2.title Історії успіху наших учнів у Кропивницькому
-        h3.subtitle.h5.text-light Чесні відгуки про роботу наших інструкторів, автопарк та підготовку до іспитів
+        //- Точне входження найпопулярнішого пошукового запиту
+        h2.title Відгуки про автошколу «Центр» у Кропивницькому
+
+        //- Змінено h3 на p + додано LSI-слова
+        p.subtitle.h5.text-light Реальні історії успіху наших учнів: чесно про роботу інструкторів з водіння, автопарк та підготовку до іспитів у ТСЦ.
+
         .row
             .proof
-                img.proof__icon(src="img/google-icon.svg", alt="Відгуки про автошколу Центр у Google", width="30", height="30")
+                //- Розширений alt для Google
+                img.proof__icon(src="img/google-icon.svg", alt="Рейтинг та відгуки про автошколу Центр у Google Maps", width="30", height="30")
                 div
                     .proof__rating.rating(style="--star-rating: 5;")
                     b.text-bold 5.0
                     |&nbsp;
-                    a.proof__reviews(href="https://maps.app.goo.gl/z6bf4nLhmzogFT6x5", target="_blank", rel="noopener") 32 відгуки
+                    a.proof__reviews(href="https://google.com/maps?cid=9312322946195322361&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAFKgSoqNcy", target="_blank", rel="noopener") 32 відгуки
             .proof
-                img.proof__icon(src="img/top20.png", alt="Відгуки про автошколу Центр у Google", height="30", width="72")
+                //- Виправлено помилку копіпасту в alt-тексті
+                img.proof__icon(src="img/top20.webp", alt="Відгуки про автошколу Центр на порталі ТОП20 Кропивницький", height="30", width="72")
                 div
                     .proof__rating.rating(style="--star-rating: 4.9;")
                     b.text-bold 4.9

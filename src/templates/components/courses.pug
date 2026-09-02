@@ -2,12 +2,14 @@ section.courses.section#courses
     .container
         .pre-title Програми навчання
         h2.title Ціни на навчання в автошколі «Центр» у Кропивницькому
-        h3.subtitle.text-light.h5 Від нуля до впевненого водіння в Кропивницькому — оберіть потрібну програму
+        //- Змінено h3 на p, щоб не ламати структуру документа
+        p.subtitle.text-light.h5 Від нуля до впевненого водіння в Кропивницькому — оберіть потрібну програму
         ul.row.row-cols-lg-3
             li.col
                 .card.card-secondary
                     .card__body
-                        h4.card__title.h5.w-100.text-center Практичний курс
+                        //- Змінено h4 на h3 для правильної SEO-ієрархії + додано LSI-ключ "водіння"
+                        h3.card__title.h5.w-100.text-center Практичний курс водіння
                         table.card__table.table
                             tbody
                                 tr
@@ -35,11 +37,13 @@ section.courses.section#courses
                     .card__footer
                         +btn( "primary", "normal", true)
                             span Записатись
+
             li.col.courses-main-col
                 .card.card-primary
                     .card__body
                         .card__frame
-                            h4.card__title.h5.text-center Повний курс (Теорія + Практика)
+                            //- Змінено h4 на h3 + оптимізовано назву
+                            h3.card__title.h5.text-center Повний курс водіння (Теорія + Практика)
                             table.card__table.table
                                 tbody
                                     tr
@@ -67,10 +71,12 @@ section.courses.section#courses
                     .card__footer
                         +btn( "cta", "normal", true)
                             span Записатись
+
             li.col
                 .card.card-secondary
                     .card__body
-                        h4.card__title.h5.w-100.text-center Теоретичний курс
+                        //- Змінено h4 на h3 + додано LSI-ключ "ПДР"
+                        h3.card__title.h5.w-100.text-center Теоретичний курс ПДР
                         table.card__table.table
                             tbody
                                 tr
@@ -81,7 +87,7 @@ section.courses.section#courses
                                     td 3 тижні
                                 tr
                                     td Старт
-                                    td Набір триває до &nbsp;
+                                    td Набір триває до&nbsp;
                                         span= deadline
                                 tr
                                     td Категорія

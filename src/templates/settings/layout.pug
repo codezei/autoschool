@@ -3,23 +3,25 @@ block html
     html(lang=lang)
         head
             block head
-                - const domain = "https://https://autoschool-center.com.ua/"
+                - const domain = "https://autoschool-center.com.ua/"
                 meta(charset="UTF-8")
                 meta(name="viewport" content="width=device-width, initial-scale=1.0")
                 meta(http-equiv="X-UA-Compatible" content="ie=edge")
                 meta(name="theme-color" content=themeColor)
                 title= pageTitle
                 block fonts
-                link(rel="stylesheet" href="css/main.min.css")
+                link(rel="stylesheet" href="css/main.min.css?v=2.0")
                 link(rel="icon" href="img/favicon.ico" type="image/x-icon")
                 link(rel="canonical", href= domain + pageUrl)
                 meta(name="description", content=pageDescription)
-                meta(name="keywords", content=pageKeywords)
+                //- meta(name="keywords", content=pageKeywords)
                 meta(name="robots" content="index, follow")
                 meta(property="og:title", content=pageTitle)
                 meta(property="og:description", content=pageDescription)
                 meta(property="og:type" content="website")
                 meta(property="og:url", content= domain + pageUrl)
+                meta(property="og:image:width" content="1200")
+                meta(property="og:image:height" content="675")
                 meta(property="og:image", content= domain + pageImage)
                 meta(name="twitter:card" content="summary_large_image")
                 meta(name="twitter:title", content=pageTitle)

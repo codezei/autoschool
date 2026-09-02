@@ -152,9 +152,28 @@
 }
 
 .menu {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-grow: 1;
+
+    @media screen and (max-width: 1199px) {
+            &:before {
+                    content: "";
+                    display: block;
+                    width: 150px;
+                    height: 69px;
+                    background-image: url(../img/logo.webp);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+    }
+
     // .menu {
     //     @media screen and (min-width: 1200px) {
     //         flex-direction: column;
@@ -345,7 +364,9 @@
         transform: rotate(-5deg);
     }
 }
-
+.logo {
+    display: inline-block;
+}
 // .logo {
 //     color: inherit;
 //     transform: translateY(-10px);

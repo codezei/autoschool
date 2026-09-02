@@ -3,18 +3,24 @@ section.promo.section#promo
         .promo-grid
             .promo-grid__head.promo__head
                 .pre-title Автошкола «Центр»
-                h1.title.promo__title Це твоя автошкола у&nbsp;Кропивницькому — курси водіння та&nbsp;підготовка до&nbsp;іспиту
-                h2.subtitle.promo__subtitle.h5.text-light Отримати посвідчення водія категорії <b>B</b> простіше, ніж здається. <br>Практика на маршрутах ТСЦ Кропивницького, сучасні авто та повний супровід.
+                //- H1 скорочено до 56 символів (Screaming Frog ліміт - 70). Концентрований SEO-ключ.
+                h1.title.promo__title Автошкола у&nbsp;Кропивницькому: курси водіння категорії&nbsp;B
+
+                //- Замінили h2 на p, щоб не порушувати ієрархію заголовків і прибрати помилку Screaming Frog
+                p.subtitle.promo__subtitle.h5.text-light Отримати посвідчення водія простіше, ніж здається. <br>Практика на офіційних маршрутах ТСЦ, сучасні авто та повний супровід.
+
             .promo-grid__list.promo__list
                 ul.list.list-chevron.list-row
-                    li Досвід роботи <br>понад 15 років
-                    li Кваліфіковані <br>інструктори
-                    li Сучасні авто
+                    li 15 років досвіду <br>навчання водіїв
+                    li Практика на <br>маршрутах ТСЦ
+                    li Сучасні авто <br>АКПП та МКПП
+
             .promo-grid__offer.promo__offer
                 .card.card-primary
                     .card__body
                         .card__frame
-                            h3.card__title.h5 Повний курс (теорія + практика)
+                            //- Змінили h3 на p, оскільки це елемент UI, а не структурний розділ сторінки
+                            p.card__title.h5.text-bold Повний курс (теорія + практика)
                             .row.row-cols-2
                                 .col
                                     .price-old 14&nbsp;000&nbsp;грн
@@ -25,18 +31,21 @@ section.promo.section#promo
                                 .col
                                     picture
                                         source(srcset="img/helm.webp" type="image/webp")
-                                        img.helm(src="img/helm.png", alt="Автокурси категорії B у Кропивницькому", width="200", height="174", loading="eager")
+                                        img.helm(src="img/helm.png", alt="Курси водіння категорії B у Кропивницькому - Автошкола Центр", width="200", height="174", loading="eager")
                     .card__footer
                         .card__footer-btn
                             +btn( "cta", "normal", true)
                                 span Забронювати місце в групі
-                        .card__footer-text І вже через 9 тижнів ти будеш готовий до іспиту в ТСЦ
+                        .card__footer-text.text-shadow-dark І вже через 9 тижнів ти будеш готовий до іспиту в ТСЦ
+
             .promo-grid__graduate.promo__graduate
                 picture
                     source(srcset="img/student-mob.webp" type="image/webp" media="(max-width: 575px)")
                     source(srcset="img/student-mob.png" media="(max-width: 575px)")
                     source(srcset="img/student.webp" type="image/webp")
+                    //- LCP Зображення: атрибути пріоритету залишені правильними
                     img.promo__graduate-img(src="img/student.png", alt="Учень автошколи Центр Кропивницький з посвідченням водія", width="974", height="987", loading="eager", fetchpriority="high")
+
             .promo-grid__proof.promo__proof
                 .proof
                     img.proof__icon(src="img/google-icon.svg", alt="Відгуки про автошколу Центр у Google", width="30", height="30")
@@ -44,4 +53,4 @@ section.promo.section#promo
                         .proof__rating.rating(style="--star-rating: 5;")
                         b.text-bold 5.0
                         |&nbsp;
-                        a.proof__reviews(href="https://maps.app.goo.gl/z6bf4nLhmzogFT6x5", target="_blank", rel="noopener") 32 відгуки
+                        a.proof__reviews(href="https://google.com/maps?cid=9312322946195322361&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAFKgSoqNcy", target="_blank", rel="noopener") 32 відгуки

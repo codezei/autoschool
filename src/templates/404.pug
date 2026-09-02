@@ -1,0 +1,49 @@
+extends settings/layout
+
+prepend html
+    - const lang = "uk";
+
+prepend head
+    - const pageTitle = "Сторінка не знайдена — Автошкола «Центр»"
+    - const themeColor = "#ffffff"
+    - const pageDescription = "На жаль, сторінку не знайдено. Перейдіть на головну сторінку автошколи «Центр» у Кропивницькому або скористайтеся навігацією сайту."
+    - const pageKeywords = ""
+    - const pageUrl = "";
+    - const pageImage = "img/preview.webp";
+    - const twitterImage = "img/preview.webp";
+    - const deadline = '04.09.2026'
+
+append head
+    meta(name="robots" content="noindex, follow")
+    link(rel="preload" as="image" href="img/student-mob.webp" type="image/webp" media="(max-width: 575px)" fetchpriority="high")
+    link(rel="preload" href="fonts/ibm-plex-sans-v23-cyrillic-ext-300.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/ibm-plex-sans-v23-cyrillic-ext-700.woff2" as="font" type="font/woff2" crossorigin)
+    include components/schema
+
+append fonts
+    style.
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: url('./fonts/ibm-plex-sans-v23-cyrillic-ext-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: url('./fonts/ibm-plex-sans-v23-cyrillic-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+append content
+    main.page-not-found.section.text-center
+        .container
+            picture.logo
+                source(srcset="img/logo.webp" type="image/webp")
+                img.logo__img(src="img/logo.png" alt="Логотип автошколи Центр" width="150" height="69")
+            h1 Сторінку не знайдено
+            p На жаль, сторінка, яку ви шукаєте, не існує або була переміщена.
+            a.btn.btn-primary(href="/")
+                span Повернутися на головну
